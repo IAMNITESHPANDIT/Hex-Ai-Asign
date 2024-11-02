@@ -1,0 +1,87 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg-color: #f8f9fa;
+  --nav-link-color: #007bff;
+}
+
+.dark-mode {
+  --bg-color: #1c1c1c;
+  --text-color: #ffffff;
+  --navbar-bg-color: #343a40;
+  --nav-link-color: #80d4ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg-color);
+  .navbar-brand,
+  .nav-link {
+    color: var(--nav-link-color);
+  }
+}
+
+.nav-link.active {
+  color: var(--text-color);
+}
+
+/* Switch toggle styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked slider styles */
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.avtar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: relative;
+  margin-top: -10px;
+}
