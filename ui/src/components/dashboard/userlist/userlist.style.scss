@@ -1,0 +1,41 @@
+.user-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+
+  .profile-card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .profile-details {
+    color: #fff;
+  }
+
+  .profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .profile-username {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .add-friend-button:hover {
+    background: #0056b3;
+  }
+}
