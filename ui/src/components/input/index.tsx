@@ -7,7 +7,7 @@ interface InputProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   required?: boolean;
-  disabled?: boolean; // Optional prop to disable the input field. Default is false.
+  disabled?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({

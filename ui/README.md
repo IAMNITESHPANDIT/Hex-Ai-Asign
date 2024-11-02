@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a frontend application built with React. It serves as the user interface for the backend services and allows users to interact with the application seamlessly.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm (comes with Node.js) or [Yarn](https://yarnpkg.com/)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Clone the repository:**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/IAMNITESHPANDIT/Hex-Ai-Asign
+   cd Hex-Ai-Asign
+   ```
 
-### `npm test`
+2. **Install dependencies:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Set up environment variables:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Create a `.env` file in the root of the project and add the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```plaintext
+   REACT_APP_BASE_AUTH=https://hex-ai-asign.onrender.com
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - **`REACT_APP_BASE_AUTH`**: Base URL for the backend authentication service.
 
-### `npm run eject`
+4. **Run the application:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   By default, the application will start on [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The project structure follows a standard React setup:
 
-## Learn More
+```plaintext
+├── src
+│   ├── components      # Reusable React components
+│   ├── pages           # Application pages
+│   ├── redux           # Redux store and slices
+│   ├── utils           # Utility functions and helpers
+│   ├── assets          # Static assets (images, fonts, etc.)
+│   └── App.js          # Main application component
+├── public              # Public assets
+└── package.json        # Project metadata and dependencies
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- User authentication (login, registration)
+- User profile management
+- Activity logging
+- Responsive design
+
+## API Documentation
+
+The frontend communicates with the following API endpoints:
+
+- **Authentication**
+
+  - `POST /api/auth/login` - Log in a user and retrieve a JWT token.
+  - `POST /api/auth/register` - Register a new user.
+
+- **User Data**
+  - `GET /api/user/profile` - Retrieve user profile data.
+
+## Running Tests
+
+To run the test suite for this application, use:
+
+```bash
+npm test
+```
+
+## Security Recommendations
+
+- Ensure that sensitive information (like API keys) is stored securely and not exposed in the codebase.
+- Use HTTPS for API requests in production environments.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
