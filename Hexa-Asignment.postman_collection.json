@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "381ec726-7b0f-476d-8a33-71f5bde4af69",
+		"name": "Hexa-Asignment",
+		"description": "this is asignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27886971"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"nitesh3@gmail.com\",\n  \"password\": \"12345\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Dev\",\n  \"username\" : \"iamniteshdev3\",\n  \"email\" : \"nitesh3@gmail.com\",\n  \"password\": \"12345\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable-2MFA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"nitesh456@gmail.com\",\n  \"password\": \"12345\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/enable-2fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"enable-2fa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "get-profile-detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI1YTkzZDNjOTgwODMwMzY2MzhiOWIiLCJpYXQiOjE3MzA1MjE4MTIsImV4cCI6MTczMDUyNTQxMn0.-BLeF4vluqi99251Tk6Hq4WVvbKjoMooSywW_DpkiOA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user/profile",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "67259319e1e8da1660c99463",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-of-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA0NzczMzcsImV4cCI6MTczMDQ4MDkzN30.tZpOcuH87Lte2A-zDAvLEuXFajAKsBRO4bETz5nYHws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI1OTMxOWUxZThkYTE2NjBjOTk0NjMiLCJpYXQiOjE3MzA1MTYzNTYsImV4cCI6MTczMDUxOTk1Nn0.NZpePfhU-ZFg4zO4HVuTq1-JtzzV6hYCYsLtDJlDQ40",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user/activity?userId=67259319e1e8da1660c99463",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "67259319e1e8da1660c99463"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload-profile-picture",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YWM5ZTMyNmY5MDViMjk1MmUyNDMiLCJpYXQiOjE3MzA0NTg4ODksImV4cCI6MTczMDQ2MjQ4OX0.KabnIZ6w5UJ6uXzh63IIvvlYZUXJ8b02fXwdJZ43saY"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/Users/apple/Downloads/54904759.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user/profile/upload",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile",
+								"upload"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:6000/api/v1/user/profile/upload \\\n  -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\\n  -H \"Content-Type: multipart/form-data\" \\\n  -F \"profilePicture=@/path/to/your/image.jpg\"\n"
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile-detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA1MTQ1NDksImV4cCI6MTczMDUxODE0OX0.W0DNCbGYtm6-DcH1HqvZz8tItUoNbhYGGbpXzrHSoH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"thisNitesh\",\n    \"email\": \"nitesh34@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user/profile",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Record user Activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA1MTQ1NDksImV4cCI6MTczMDUxODE0OX0.W0DNCbGYtm6-DcH1HqvZz8tItUoNbhYGGbpXzrHSoH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"6724c0b5c7834c177ba3c710\",\n    \"activity\": \"this is testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/user/profile",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CHAT",
+			"item": [
+				{
+					"name": "Send-message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YWM5ZTMyNmY5MDViMjk1MmUyNDMiLCJpYXQiOjE3MzA0NTk0NzEsImV4cCI6MTczMDQ2MzA3MX0.j6Lkc7v8MnKvAfCx9Vmziu26Nokh0Ksm4k87X3PgxLw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiverId\": \"6724ac9e326f905b2952e243\",\n    \"message\":\"hello there \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/chat",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-message-by-userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA0ODI1NTEsImV4cCI6MTczMDQ4NjE1MX0.ouOB8bLSdhTfBlmJ7VM3nOZpMbWVbVVpRTBMzVLYcRE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"6724c0b5c7834c177ba3c710\",\n    \"otherUserId\": \"6724c0aec7834c177ba3c70c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/chat/interaction",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chat",
+								"interaction"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6724c0b5c7834c177ba3c710",
+									"disabled": true
+								},
+								{
+									"key": "otherUserId",
+									"value": "6724c0aec7834c177ba3c70c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FRIEND",
+			"item": [
+				{
+					"name": "add Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA0NjE4ODUsImV4cCI6MTczMDQ2NTQ4NX0.asUrvrDLZS94XnqR3LRTDuLJaGrnMnrxutIo5QE5TaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"friendId\": \"6724c421c77dedf3fa92bd3a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hex-ai-asign.onrender.com/api/v1/friend",
+							"protocol": "https",
+							"host": [
+								"hex-ai-asign",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"friend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA0NjE4ODUsImV4cCI6MTczMDQ2NTQ4NX0.asUrvrDLZS94XnqR3LRTDuLJaGrnMnrxutIo5QE5TaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"6724c0aec7834c177ba3c70c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/friend/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"friend",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "friendId",
+									"value": "6724aa227a32641e56cd09b5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list of friends",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0YzBiNWM3ODM0YzE3N2JhM2M3MTAiLCJpYXQiOjE3MzA0NjE4ODUsImV4cCI6MTczMDQ2NTQ4NX0.asUrvrDLZS94XnqR3LRTDuLJaGrnMnrxutIo5QE5TaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/friend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"friend"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
